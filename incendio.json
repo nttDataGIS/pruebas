@@ -1,0 +1,138 @@
+{
+  "bbox": [204747.84129690897, 4123180.9154189397, 277143.3591648678, 4158000.721597014],
+  "center": {"x": 240945.60023088838, "y": 4140590.818507977},
+  "controls": ["mouse"],
+  "maxExtent": [73733.49801635131, 3928230.3582630055, 649949.4135838121, 4334624.218568861],
+  "zoom": 2,
+  "wmcfiles": ["https://www.juntadeandalucia.es/medioambiente/servtc5/ventana/documentos/incendios/server/mapa_base.xml"],
+  "constructionLayers": [
+    {
+      "layerType": "wms",
+      "url": "https://www.callejerodeandalucia.es/servicios/base/wms?",
+      "name": "batimetria",
+      "legend": "Batimetría"
+    },
+    {
+      "layerType": "wms",
+      "url": "https://www.callejerodeandalucia.es/servicios/base/wms?",
+      "name": "contexto_andalucia",
+      "legend": "Contexto"
+    }
+  ],
+  "layers": [
+    {
+      "layerType": "wms",
+      "url": "https://www.ideandalucia.es/wms/mta10v_2007?",
+      "name": "mta10v_2007",
+      "legend": "Topográfico 1:10000 (vectorial)",
+      "transparent": true,
+      "tiled": true,
+      "visibility": false
+    }, {
+      "layerType": "wfs",
+      "url": "http://geostematicos-sigc.juntadeandalucia.es/geoserver/tematicos/ows?",
+      "namespace": "tematicos",
+      "name": "Provincias",
+      "legend": "Provincias",
+      "geometry": "MPOLYGON",
+      "ids": "3,4"
+    }, {
+      "layerType": "geojson",
+      "layer": {
+        "name": "puntossevilla",
+        "legend": "Puntos en Sevilla",
+        "source": {
+          "type": "FeatureCollection",
+          "features": [
+            {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+              -5.986175537109375,
+              37.405073750176925
+              ]
+            }
+            },
+            {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+              -5.9600830078125,
+              37.39525510959719
+              ]
+            }
+            },
+            {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+              -5.96282958984375,
+              37.3761596260875
+              ]
+            }
+            },
+            {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+              -6.0239410400390625,
+              37.40725549559874
+              ]
+            }
+            },
+            {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+              -6.008148193359375,
+              37.35323862707864
+              ]
+            }
+            }
+          ]
+          },
+        "extract": false
+      },
+      "style": {
+        "type": "Point",
+        "options": {
+          "fill": {
+            "color": "red"
+          },
+          "radius": 10
+        }
+      },
+      "zindex": 1
+    }
+  ],
+  "scripts": {
+    "inicio": {
+      "css": ["https://cdn.jsdelivr.net/gh/everisEquipoGIS/pruebas@9f59f19/estiloGeoperfil.css"]
+    },
+    "final": {
+      "js": [
+        "https://cdn.statically.io/gh/everisEquipoGIS/PLG_Hor_Navigation/master/1.0.0/plg_hor_navigation.ol.min.js",
+        "https://cdn.statically.io/gh/everisEquipoGIS/incendio/main/attributions.ol.min.js",
+        "https://cdn.statically.io/gh/everisEquipoGIS/PLG-COMUNICACION-CATASTRO/main/plg_comunicacion_catastro.ol.min.js",
+        "https://cdn.statically.io/gh/everisEquipoGIS/incendio/main/managelayers.ol.min.js",
+        "https://cdn.statically.io/gh/everisEquipoGIS/pruebas/master/plugins.js"
+      ],
+      "css": [
+        "https://cdn.statically.io/gh/everisEquipoGIS/PLG_Hor_Navigation/master/1.0.0/plg_hor_navigation.ol.min.css",
+        "https://cdn.statically.io/gh/everisEquipoGIS/incendio/main/attributions.min.css",
+        "https://cdn.statically.io/gh/everisEquipoGIS/PLG-COMUNICACION-CATASTRO/main/plg_comunicacion_catastro.ol.min.css",
+        "https://cdn.statically.io/gh/everisEquipoGIS/incendio/main/managelayers.min.css"
+      ]
+    }
+  }
+}
